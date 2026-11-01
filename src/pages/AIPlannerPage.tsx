@@ -76,8 +76,8 @@ export const AIPlannerPage: React.FC = () => {
       date: '2026-11-20'
     },
     {
-      title: 'DevFest Hackathon Bengaluru',
-      prompt: 'Organize GDG DevFest Hackathon at Leela Palace Bengaluru for 800 developers with ₹15,00,000 budget',
+      title: 'Tech Hackathon Bengaluru',
+      prompt: 'Organize AI & Tech Hackathon at Leela Palace Bengaluru for 800 developers with ₹15,00,000 budget',
       city: 'Bengaluru',
       location: 'The Leela Palace Convention Center',
       date: '2026-11-14'

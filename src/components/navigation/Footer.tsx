@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Your AI-powered event orchestration platform inspired by Google Developer Groups and DevFest Gujarat.
+              Your next-generation AI-powered event orchestration platform for celebrations and conferences.
             </p>
             <div className="flex space-x-3 pt-2">
               <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors">
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
-          <p>© 2026 PlanoAI Platform. Inspired by GDG DevFest Gujarat.</p>
+          <p>© 2026 PlanoAI Platform. All rights reserved.</p>
           <div className="flex items-center space-x-1 mt-2 md:mt-0">
             <span>Crafted with</span>
             <Heart className="w-3.5 h-3.5 text-google-red fill-google-red" />

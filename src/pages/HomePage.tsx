@@ -34,7 +34,7 @@ export const HomePage: React.FC = () => {
 
   const samplePrompts = [
     'Organize an outdoor Gujarati royal wedding in Vadodara for 300 guests with ₹25,00,000 budget',
-    'Plan GDG DevFest Hackathon in Science City Ahmedabad for 800 developers with ₹15,00,000 budget',
+    'Plan Tech Innovation Hackathon in Science City Ahmedabad for 800 developers with ₹15,00,000 budget',
     'Corporate AI Product Unveil Gala & Dinner at Surya Palace Vadodara for 180 delegates',
   ];
 

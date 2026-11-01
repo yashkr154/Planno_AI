@@ -24,9 +24,9 @@ export const INITIAL_EVENTS: Event[] = [
   },
   {
     id: 'evt-2',
-    title: 'GDG DevFest Gujarat 2026',
+    title: 'Gujarat Tech Summit & Hackathon 2026',
     type: 'hackathon',
-    description: 'The largest annual developer conference and hackathon in Gujarat uniting 800+ builders, GDG organizers, and tech innovators.',
+    description: 'The largest annual developer conference and hackathon in Gujarat uniting 800+ builders, tech leaders, and innovators.',
     date: '2026-11-14',
     time: '09:00 AM',
     location: 'Science City Convention Center',
