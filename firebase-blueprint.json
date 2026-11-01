@@ -1,0 +1,124 @@
+{
+  "entities": {
+    "Profile": {
+      "title": "UserProfile",
+      "description": "User profile records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 100 },
+        "avatarUrl": { "type": "string", "maxLength": 500 },
+        "role": { "type": "string", "maxLength": 50 },
+        "preferredCurrency": { "type": "string", "maxLength": 10 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "email"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "Event detail documents",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "type": { "type": "string" },
+        "description": { "type": "string", "maxLength": 2000 },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "location": { "type": "string", "maxLength": 200 },
+        "city": { "type": "string", "maxLength": 100 },
+        "guestCount": { "type": "integer" },
+        "budget": { "type": "number" },
+        "estimatedCost": { "type": "number" },
+        "actualCost": { "type": "number" },
+        "disbursedAmount": { "type": "number" },
+        "outstandingAmount": { "type": "number" },
+        "status": { "type": "string" },
+        "theme": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "currency": { "type": "string" }
+      },
+      "required": ["id", "userId", "title", "date"]
+    },
+    "Task": {
+      "title": "Task",
+      "description": "Task items for events",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "eventId": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string", "maxLength": 200 },
+        "category": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "priority": { "type": "string" },
+        "assignedTo": { "type": "string" }
+      },
+      "required": ["id", "eventId", "userId", "title"]
+    },
+    "Expense": {
+      "title": "Expense",
+      "description": "Financial expense ledger entries",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "eventId": { "type": "string" },
+        "userId": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string", "maxLength": 500 },
+        "estimatedAmount": { "type": "number" },
+        "actualAmount": { "type": "number" },
+        "paidAmount": { "type": "number" },
+        "status": { "type": "string" },
+        "vendor": { "type": "string" }
+      },
+      "required": ["id", "eventId", "userId", "description"]
+    },
+    "Guest": {
+      "title": "Guest",
+      "description": "Attendee list and RSVP pass records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "eventId": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "rsvpStatus": { "type": "string" },
+        "plusOne": { "type": "boolean" },
+        "tableNumber": { "type": "string" },
+        "qrToken": { "type": "string" },
+        "dietPreferences": { "type": "string" },
+        "invitationSent": { "type": "boolean" },
+        "group": { "type": "string" }
+      },
+      "required": ["id", "eventId", "userId", "name"]
+    }
+  },
+  "firestore": {
+    "/profiles/{userId}": {
+      "schema": { "$ref": "#/entities/Profile" },
+      "description": "User profile document"
+    },
+    "/events/{eventId}": {
+      "schema": { "$ref": "#/entities/Event" },
+      "description": "Event documents created by users"
+    },
+    "/tasks/{taskId}": {
+      "schema": { "$ref": "#/entities/Task" },
+      "description": "Task items for events"
+    },
+    "/expenses/{expenseId}": {
+      "schema": { "$ref": "#/entities/Expense" },
+      "description": "Financial ledger expenses"
+    },
+    "/guests/{guestId}": {
+      "schema": { "$ref": "#/entities/Guest" },
+      "description": "Guest attendee records"
+    }
+  }
+}
